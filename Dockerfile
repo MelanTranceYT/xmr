@@ -78,12 +78,12 @@ RUN apt-get update -qqy \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
-RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
-    && apt install /tmp/chrome-remote-desktop_current_amd64.deb
-    && mkdir ~/.config/chrome-remote-desktop
-RUN wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-    && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-    && echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
-    && sudo tee -a /etc/apt/sources.list.d/virtualbox.list
-    && apt update
-    && apt install virtualbox-6.1
+RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp \
+    && apt install /tmp/chrome-remote-desktop_current_amd64.deb \
+    && mkdir ~/.config/chrome-remote-desktop \
+RUN wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - \
+    && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - \
+    && echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" \
+    && sudo tee -a /etc/apt/sources.list.d/virtualbox.list \
+    && apt update \
+    && apt install virtualbox-6.1 \
