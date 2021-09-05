@@ -53,8 +53,8 @@ RUN apt-get -qqy update \
     && wget https://dl.flathub.org/repo/appstream/org.gnome.Boxes.flatpakref \
     && add-apt-repository ppa:alexlarsson/flatpak \
     && apt update \
-    && apt install flatpak \
-    && flatpak install flathub org.gnome.Boxes \
+    && apt install flatpak -y \
+    && flatpak install flathub org.gnome.Boxes -y \
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
