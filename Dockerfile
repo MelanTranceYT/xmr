@@ -50,10 +50,7 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && apt install gcc build-essential linux-headers-generic \
-    && wget https://www.vmware.com/go/getplayer-linux \
-    && chmod +x getplayer-linux \
-    && ./getplayer-linux --required --eulas-agreed \
+    && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh \
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
