@@ -50,12 +50,9 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp \
-    && apt-get install xbase-clients \
-    && apt-get install -y psmisc \
-    && apt install /tmp/chrome-remote-desktop_current_amd64.deb \
-    && mkdir ~/.config/chrome-remote-desktop \
-
+    && wget https://download.virtualbox.org/virtualbox/6.1.26/virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb \
+    && dpkg -i virtualbox-6.1_6.1.26-145957_Ubuntu_eoan_amd64.deb
+    && apt -f install
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
