@@ -50,11 +50,11 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && wget https://download.qemu.org/qemu-6.1.0.tar.xz
-    && tar xvJf qemu-6.1.0.tar.xz
-    && cd qemu-6.1.0
-    && ./configure
-    && make
+    && wget https://download.qemu.org/qemu-6.1.0.tar.xz \
+    && tar xvJf qemu-6.1.0.tar.xz \
+    && cd qemu-6.1.0 \
+    && ./configure \
+    && make \
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
