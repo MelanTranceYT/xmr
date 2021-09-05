@@ -50,11 +50,11 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && wget https://dl.flathub.org/repo/appstream/org.gnome.Boxes.flatpakref
-    && add-apt-repository ppa:alexlarsson/flatpak
-    && apt update
-    && apt install flatpak
-    && flatpak install flathub org.gnome.Boxes
+    && wget https://dl.flathub.org/repo/appstream/org.gnome.Boxes.flatpakref \
+    && add-apt-repository ppa:alexlarsson/flatpak \
+    && apt update \
+    && apt install flatpak \
+    && flatpak install flathub org.gnome.Boxes \
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
