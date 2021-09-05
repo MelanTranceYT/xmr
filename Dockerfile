@@ -50,7 +50,7 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && apt-get install psmisc libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian python
+    && apt-get install psmisc libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian python \
     && wget https://download.virtualbox.org/virtualbox/6.1.26/virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb \
     && dpkg -i virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb \
     && apt -f install \
