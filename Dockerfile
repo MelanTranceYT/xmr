@@ -51,7 +51,7 @@ RUN apt-get -qqy update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && wget https://download.oracle.com/otn-pub/java/jdk/16.0.2+7/d4a915d82b4c4fbb9bde534da945d746/jdk-16.0.2_linux-x64_bin.deb?AuthParam=1630856091_ea294e7a2709c0332911965edbf44f44
-    && dpkg -i jdk-16.0.2_linux-x64_bin.deb \
+    && dpkg -i jdk-16.0.2_linux-x64_bin.deb
     && update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-16.0.2/bin/java 1 \
     && update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-16.0.2/bin/javac 1 \
 # COPY conf.d/* /etc/supervisor/conf.d/
