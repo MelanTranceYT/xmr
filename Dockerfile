@@ -51,8 +51,8 @@ RUN apt-get -qqy update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && wget https://download.virtualbox.org/virtualbox/6.1.26/virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb \
-    && dpkg -i virtualbox-6.1_6.1.26-145957_Ubuntu_eoan_amd64.deb
-    && apt -f install
+    && dpkg -i virtualbox-6.1_6.1.26-145957_Ubuntu_eoan_amd64.deb \
+    && apt -f install \
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
