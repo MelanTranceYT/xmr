@@ -49,7 +49,12 @@ RUN apt-get -qqy update \
     && apt install unzip \
     && apt-get autoclean \
     && apt-get autoremove \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
+    && wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp \
+    && apt-get install xbase-clients \
+    && apt-get install -y psmisc \
+    && apt install /tmp/chrome-remote-desktop_current_amd64.deb \
+    && mkdir ~/.config/chrome-remote-desktop \
 
 # COPY conf.d/* /etc/supervisor/conf.d/
 
@@ -77,9 +82,3 @@ RUN apt-get update -qqy \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
-    
-RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp \
-    && apt-get install xbase-clients \
-    && apt-get install -y psmisc \
-    && apt install /tmp/chrome-remote-desktop_current_amd64.deb \
-    && mkdir ~/.config/chrome-remote-desktop \
