@@ -77,19 +77,7 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.8/cpp-4.8_4.8.5-4ubuntu8_amd64.deb \
-    && dpkg -i cpp-4.8_4.8.5-4ubuntu8_amd64.deb \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.8/gcc-4.8-base_4.8.5-4ubuntu8_amd64.deb \
-    && dpkg -i gcc-4.8-base_4.8.5-4ubuntu8_amd64.deb \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.8/libgcc-4.8-dev_4.8.5-4ubuntu8_amd64.deb \
-    && dpkg -i libgcc-4.8-dev_4.8.5-4ubuntu8_amd64.deb \
     && apt-get install build-essential -y \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-4.8/gcc-4.8_4.8.5-4ubuntu8_amd64.deb \
-    && dpkg -i gcc-4.8_4.8.5-4ubuntu8_amd64.deb \
     && apt-get update \
-    && apt-get install libgcc-4.8-dev \
-    && apt-get install gcc-4.8-base \
-    && apt-get install cpp-4.8 \
-    && apt-get install gcc-4.8 \
     && wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle \
     && bash VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle
