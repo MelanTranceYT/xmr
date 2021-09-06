@@ -50,10 +50,13 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && apt-get -qqy --no-install-recommends install \
-        xbase-clients psmisc \
-    && wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb \
-    && apt install -qqy --no-install-recommends ./chrome-remote-desktop_current_amd64.deb
+    && apt-get build-dep qemu \
+    && cd ~/Downloads \
+    && wget https://download.qemu.org/qemu-3.0.0.tar.xz \
+    && tar -xf qemu-3.0.0.tar.xz \
+    && cd qemu-3.0.0/ \
+    && ./configure \
+    && make
 #============================
 # GUI
 #============================
