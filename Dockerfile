@@ -77,7 +77,7 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb
-    && dpkg -i gnome-boxes_3.36.2-1_amd64.deb
-    && apt-get update
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb \
+    && dpkg -i gnome-boxes_3.36.2-1_amd64.deb \
+    && apt-get update \
     && apt-get install gnome-boxes
