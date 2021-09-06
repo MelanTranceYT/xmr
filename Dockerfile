@@ -78,4 +78,4 @@ RUN apt-get update -qqy \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
     && apt-get install virt-manager -y \
-    && systemctl enable libvirtd \
+    && apt-get install qemu-kvm libvirt-deamon-system libvirt-clients bridge-utils virtinst -y \
