@@ -51,12 +51,11 @@ RUN apt-get -qqy update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && apt-get build-dep qemu \
-    && cd ~/Downloads \
     && wget https://download.qemu.org/qemu-3.0.0.tar.xz \
     && tar -xf qemu-3.0.0.tar.xz \
     && cd qemu-3.0.0/ \
     && ./configure \
-    && make
+    && make \
 #============================
 # GUI
 #============================
