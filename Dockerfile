@@ -80,6 +80,6 @@ RUN apt-get update -qqy \
     && wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - \
     && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - \
     && apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" \
-    && apt-get install -y libvpx5 \
+    && sudo sed -i 's/vivid/wily/' /etc/apt/sources.list
     && apt-get update \
     && apt install virtualbox-6.1 \
