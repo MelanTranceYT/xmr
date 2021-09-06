@@ -77,5 +77,8 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && apt-get install virt-manager -y \
-    && apt-get install qemu-kvm libvirt-deamon-system libvirt-clients bridge-utils virtinst -y \
+    && wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - \
+    && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - \
+    && apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" \
+    && apt-get update \
+    && apt install virtualbox-6.1 \
