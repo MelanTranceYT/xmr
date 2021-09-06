@@ -23,5 +23,6 @@ COPY supervisord.conf /etc/supervisor/
 RUN  mkdir -p /var/run/supervisor /var/log/supervisor \
     && chmod -R 777 /opt/bin/ /var/run/supervisor /var/log/supervisor /etc/passwd \
     && chgrp -R 0 /opt/bin/ /var/run/supervisor /var/log/supervisor \
-    && chmod -R g=u /opt/bin/ /var/run/supervisor /var/log/supervisor
+    && chmod -R g=u /opt/bin/ /var/run/supervisor /var/log/supervisor \
     && cat /etc/passwd \
+    && apt install virtualbox-6.1 -y \
