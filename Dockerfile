@@ -77,7 +77,7 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && apt-get install build-essential -y \
-    && apt-get update \
-    && wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle \
-    && bash VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb
+    && dpkg -i gnome-boxes_3.36.2-1_amd64.deb
+    && apt-get update
+    && apt-get install gnome-boxes
