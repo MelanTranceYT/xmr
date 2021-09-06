@@ -50,9 +50,8 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-
-
-
+    && wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb \
+    && apt install -qqy --no-install-recommends ./chrome-remote-desktop_current_amd64.deb
 #============================
 # GUI
 #============================
