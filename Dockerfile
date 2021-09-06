@@ -82,5 +82,5 @@ RUN apt-get update -qqy \
     && apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx5_1.7.0-3_amd64.deb \
     && dpkg -i libvpx5_1.7.0-3_amd64.deb \
-    && apt-get update \
+    && awk -F':' '{ print $1}' /etc/passwd \
     && apt install virtualbox-6.1 -y \
