@@ -76,4 +76,4 @@ RUN apt-get update -qqy \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
-    && apt-get install openjdk-8-jdk \
+    && apt-get install openjdk-8-jdk -y \
