@@ -52,7 +52,7 @@ RUN apt-get -qqy update \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     && wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add - \
     && sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian hirsute non-free contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' \
-    && apt-get update \
+    && apt-get update 
     && apt-get install virtualbox \
 #============================
 # GUI
