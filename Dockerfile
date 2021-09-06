@@ -77,7 +77,6 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
-    && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
-    && apt-get update \
-    && apt-get install qemu-system-x86-64 \
+    && apt-get install build-essential \
+    && wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle
+    && bash VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle \
