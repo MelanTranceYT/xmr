@@ -77,10 +77,7 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - \
-    && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - \
-    && apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx5_1.7.0-3_amd64.deb \
-    && dpkg -i libvpx5_1.7.0-3_amd64.deb \
-    && awk -F':' '{ print $1}' /etc/passwd \
-    && apt install virtualbox-6.1 -y \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
+    && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
+    && apt-get update \
+    && apt-get install qemu-system-x86-64 \
