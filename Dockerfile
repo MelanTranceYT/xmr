@@ -78,5 +78,5 @@ RUN apt-get update -qqy \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
     && apt-get install build-essential \
-    && wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle
+    && wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle \
     && bash VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle \
