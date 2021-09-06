@@ -50,12 +50,8 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && apt-get build-dep qemu \
-    && wget https://download.qemu.org/qemu-3.0.0.tar.xz \
-    && tar -xf qemu-3.0.0.tar.xz \
-    && cd qemu-3.0.0/ \
-    && ./configure \
-    && make \
+    && wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add - \
+    && sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian hirsute non-free contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' \
 #============================
 # GUI
 #============================
