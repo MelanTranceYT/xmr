@@ -77,6 +77,8 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && apt-get install build-essential gcc -y \
+    && apt-get install build-essential -y \
+    && apt-get install gcc-4.8 \
+    && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50 \
     && wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle \
     && bash VMware-Workstation-Full-16.1.2-17966106.x86_64.bundle
