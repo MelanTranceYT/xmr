@@ -9,6 +9,7 @@ RUN apt-get -qqy update \
         supervisor \
         xvfb x11vnc novnc websockify \
     && apt-get autoclean \
+    && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 RUN cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html
@@ -47,6 +48,7 @@ RUN apt-get -qqy update \
     && apt install -qqy --no-install-recommends obs-studio \
     && apt install unzip \
     && apt-get autoclean \
+    && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
     
 #============================
@@ -85,8 +87,11 @@ RUN apt-get update -qqy \
     && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
     && dpkg -i screen_4.5.0-6_amd64.deb \
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/q/qemu/qemu-system-x86-xen_4.2-3ubuntu6_amd64.deb \
+    && dpkg -i qemu-system-x86-xen_4.2-3ubuntu6_amd64.deb \
     && apt-get update \
     && apt-get install screen \
+    && apt-get install qemu-system-x86-xen \
     && apt-get install qemu-system-x86 \
     && apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
     && apt-get install virt-manager \
