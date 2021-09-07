@@ -77,6 +77,10 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/f/file/libmagic-mgc_5.38-4_amd64.deb \
+    && dpkg -i libmagic-mgc_5.38-4_amd64.deb \
+    && apt-get update \
+    && apt-get install libmagic-mgc \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/f/file/libmagic1_5.38-4_amd64.deb \
     && dpkg -i libmagic1_5.38-4_amd64.deb \
     && apt-get update \
