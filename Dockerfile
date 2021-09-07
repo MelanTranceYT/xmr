@@ -93,6 +93,10 @@ RUN apt-get update -qqy \
     && dpkg -i libxslt1.1_1.1.34-4_amd64.deb \
     && apt-get update \
     && apt-get install libxslt1.1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pci.ids/pci.ids_0.0~2020.03.20-1_all.deb \
+    && dpkg -i pci.ids_0.0~2020.03.20-1_all.deb \
+    && apt-get update \
+    && apt-get install pci.ids \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/libpci3_3.6.4-1_amd64.deb \
     && dpkg -i libpci3_3.6.4-1_amd64.deb \
     && apt-get update \
