@@ -77,9 +77,14 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
+# Qemu Start  
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/liba/libaio/libaio1_0.3.112-5_amd64.deb \
+    && dpkg -i libaio1_0.3.112-5_amd64.deb \
+    && apt-get install libaio1 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-x86 \
+# qemu end
     && wget http://ftp.br.debian.org/debian/pool/main/q/qemu/qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
     && dpkg -i qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
