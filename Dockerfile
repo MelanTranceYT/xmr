@@ -94,7 +94,7 @@ RUN apt-get update -qqy \
     && apt-get update \
     && apt-get install libxslt1.1 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/libpci3_3.6.4-1_amd64.deb \
-    && depkg -i libpci3_3.6.4-1_amd64.deb \
+    && dpkg -i libpci3_3.6.4-1_amd64.deb \
     && apt-get update \
     && apt-get install libpci3 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/pciutils_3.6.4-1_amd64.deb \
