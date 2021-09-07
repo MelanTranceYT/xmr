@@ -77,6 +77,11 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
+    && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
+    && apt-get install qemu-system-x86 \
+    && wget http://ftp.br.debian.org/debian/pool/main/q/qemu/qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
+    && dpkg -i qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
     && dpkg -i libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
@@ -85,10 +90,7 @@ RUN apt-get update -qqy \
     && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
     && dpkg -i screen_4.5.0-6_amd64.deb \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu_4.2-3ubuntu6_amd64.deb \
-    && dpkg -i qemu_4.2-3ubuntu6_amd64.deb \
     && apt-get update \
     && apt-get install screen \
-    && apt-get install  \
-    && apt-get install libvirt-daemon-system libvirt-clients bridge-utils -y \
+    && apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
     && apt-get install virt-manager \
