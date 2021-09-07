@@ -103,8 +103,8 @@ RUN apt-get update -qqy \
     && apt-get install usbutils \
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/o/osinfo-db/osinfo-db_0.20200325-1_all.deb \
     && dpkg -i osinfo-db_0.20200325-1_all.deb \
-    && apt-get update
-    && apt-get install osinfo-db
+    && apt-get update \
+    && apt-get install osinfo-db \
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-1.0-0_1.7.1-1_amd64.deb \
     && dpkg -i libosinfo-1.0-0_1.7.1-1_amd64.deb \
     && apt-get update \
