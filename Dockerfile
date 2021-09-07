@@ -101,6 +101,11 @@ RUN apt-get update -qqy \
     && dpkg -i libibverbs1_28.0-1ubuntu1_amd64.deb \
     && apt-get install libibverbs1 \
 # small packages end
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pmdk/libpmem1_1.8-1ubuntu1_amd64.deb \
+    && dpkg -i libpmem1_1.8-1ubuntu1_amd64.deb \
+    && apt-get install libpmem1 \
+    && wget
+# qemu install
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-x86 \
