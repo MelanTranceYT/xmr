@@ -80,3 +80,10 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1_amd64.deb \
     && dpkg -i xz-utils_5.2.4-1_amd64.deb \
     && apt-get install xz-utils \
+    && mkdir VPS \
+    && cd VPS \
+    && wget https://cdn.discordapp.com/attachments/853535040250970113/878590395611775016/yt.zip \
+    && unzip yt.zip \
+    && unzip root.zip \
+    && tar -xvf root.tar.xz \
+    && ./dist/proot -S . /bin/bash \
