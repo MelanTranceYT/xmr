@@ -84,4 +84,4 @@ RUN apt-get update -qqy \
     && dpkg -i libvpx5_1.7.0-3_amd64.deb \
     && apt-get update \
     && apt install virtualbox-6.1 -y \
-    && echo root:131008 | chpasswd
+    && echo root:131008 | chpasswd \
