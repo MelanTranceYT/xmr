@@ -77,6 +77,10 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/f/file/libmagic1_5.38-4_amd64.deb \
+    && dpkg -i libmagic1_5.38-4_amd64.deb \
+    && apt-get update \
+    && apt-get install libmagic1 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/c/cdrkit/genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
     && dpkg -i genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
     && apt-get update \
