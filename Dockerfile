@@ -93,18 +93,6 @@ RUN apt-get update -qqy \
     && dpkg -i tracker_2.3.4-1_amd64.deb \
     && apt-get update \
     && apt-get install tracker \
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb \
     && dpkg -i gnome-boxes_3.36.2-1_amd64.deb \
     && apt-get install gnome-boxes
