@@ -90,9 +90,17 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/d/device-tree-compiler/libfdt1_1.5.1-1_amd64.deb \
     && dpkg -i libfdt1_1.5.1-1_amd64.deb \
     && apt-get install libfdt1 \
+# small packages    
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-3-200_3.4.0-1_amd64.deb \
+    && dpkg -i libnl-3-200_3.4.0-1_amd64.deb \
+    && apt-get install libnl-3-200 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-route-3-200_3.4.0-1_amd64.deb \
+    && dpkg -i libnl-route-3-200_3.4.0-1_amd64.deb \
+    && apt-get install libnl-route-3-200 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/r/rdma-core/libibverbs1_28.0-1ubuntu1_amd64.deb \
     && dpkg -i libibverbs1_28.0-1ubuntu1_amd64.deb \
     && apt-get install libibverbs1 \
+# small packages end
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-x86 \
