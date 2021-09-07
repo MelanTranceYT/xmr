@@ -81,6 +81,9 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/liba/libaio/libaio1_0.3.112-5_amd64.deb \
     && dpkg -i libaio1_0.3.112-5_amd64.deb \
     && apt-get install libaio1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/b/brltty/libbrlapi0.7_6.0+dfsg-4ubuntu6_amd64.deb \
+    && dpkg -i libbrlapi0.7_6.0+dfsg-4ubuntu6_amd64.deb \
+    && apt-get install libbrlapi0.7 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-x86 \
