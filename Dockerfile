@@ -89,6 +89,10 @@ RUN apt-get update -qqy \
     && dpkg -i genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
     && apt-get update \
     && apt-get install genisoimage \
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-1.0-0_1.7.1-1_amd64.deb \
+    && dpkg -i libosinfo-1.0-0_1.7.1-1_amd64.deb \
+    && apt-get update \
+    && apt-get install libosinfo-1.0-0 \
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-bin_1.7.1-1_amd64.deb \
     && dpkg -i libosinfo-bin_1.7.1-1_amd64.deb \
     && apt-get update \
