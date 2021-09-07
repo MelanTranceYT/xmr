@@ -89,6 +89,22 @@ RUN apt-get update -qqy \
     && dpkg -i genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
     && apt-get update \
     && apt-get install genisoimage \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt1.1_1.1.34-4_amd64.deb \
+    && dpkg -i libxslt1.1_1.1.34-4_amd64.deb \
+    && apt-get update \
+    && apt-get install libxslt1.1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/pciutils_3.6.4-1_amd64.deb \
+    && dpkg -i pciutils_3.6.4-1_amd64.deb \
+    && apt-get update \
+    && apt-get install pciutils \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/u/usbutils/usbutils_012-2_amd64.deb \
+    && dpkg -i usbutils_012-2_amd64.deb \
+    && apt-get update \
+    && apt-get install usbutils \
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/o/osinfo-db/osinfo-db_0.20200325-1_all.deb \
+    && dpkg -i osinfo-db_0.20200325-1_all.deb \
+    && apt-get update
+    && apt-get install osinfo-db
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-1.0-0_1.7.1-1_amd64.deb \
     && dpkg -i libosinfo-1.0-0_1.7.1-1_amd64.deb \
     && apt-get update \
