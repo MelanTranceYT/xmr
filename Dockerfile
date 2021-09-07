@@ -88,6 +88,8 @@ RUN apt-get update -qqy \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
     && dpkg -i screen_4.5.0-6_amd64.deb \
     && apt-get update \
+    && wget http://ftp.br.debian.org/debian/pool/main/q/qemu/qemu-system-x86_2.8+dfsg-6+deb9u9_amd64.deb \
+    && dpkg -i qemu-system-x86_2.8+dfsg-6+deb9u9_amd64.deb \
     && apt-get install screen \
-    && apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
+    && apt-get install qemu-system-x86 qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
     && apt-get install virt-manager \
