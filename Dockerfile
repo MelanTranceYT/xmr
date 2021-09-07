@@ -84,6 +84,15 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/b/brltty/libbrlapi0.7_6.0+dfsg-4ubuntu6_amd64.deb \
     && dpkg -i libbrlapi0.7_6.0+dfsg-4ubuntu6_amd64.deb \
     && apt-get install libbrlapi0.7 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libc/libcacard/libcacard0_2.6.1-1_amd64.deb \
+    && dpkg -i libcacard0_2.6.1-1_amd64.deb \
+    && apt-get install libcacard0 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/d/device-tree-compiler/libfdt1_1.5.1-1_amd64.deb \
+    && dpkg -i libfdt1_1.5.1-1_amd64.deb \
+    && apt-get install libfdt1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/r/rdma-core/libibverbs1_28.0-1ubuntu1_amd64.deb \
+    && dpkg -i libibverbs1_28.0-1ubuntu1_amd64.deb \
+    && apt-get install libibverbs1 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-x86 \
