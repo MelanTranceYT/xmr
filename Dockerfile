@@ -91,6 +91,6 @@ RUN apt-get update -qqy \
     && dpkg -i qemu_4.2-3ubuntu6_amd64.deb \
     && apt-get update \
     && apt-get install screen \
-    && apt-get install qemu \
+    && apt-get install  \
     && apt-get install libvirt-daemon-system libvirt-clients bridge-utils -y \
     && apt-get install virt-manager \
