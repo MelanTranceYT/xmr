@@ -77,58 +77,8 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/f/file/libmagic-mgc_5.38-4_amd64.deb \
-    && dpkg -i libmagic-mgc_5.38-4_amd64.deb \
-    && apt-get update \
-    && apt-get install libmagic-mgc \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/f/file/libmagic1_5.38-4_amd64.deb \
-    && dpkg -i libmagic1_5.38-4_amd64.deb \
-    && apt-get update \
-    && apt-get install libmagic1 \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/c/cdrkit/genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
-    && dpkg -i genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
-    && apt-get update \
-    && apt-get install genisoimage \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt1.1_1.1.34-4_amd64.deb \
-    && dpkg -i libxslt1.1_1.1.34-4_amd64.deb \
-    && apt-get update \
-    && apt-get install libxslt1.1 \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pci.ids/pci.ids_0.0~2020.03.20-1_all.deb \
-    && dpkg -i pci.ids_0.0~2020.03.20-1_all.deb \
-    && apt-get update \
-    && apt-get install pci.ids \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/libpci-dev_3.6.4-1_amd64.deb \
-    && dpkg -i libpci-dev_3.6.4-1_amd64.deb \
-    && apt-get update \
-    && apt-get install -y libpci3 \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/pciutils_3.6.4-1_amd64.deb \
-    && dpkg -i pciutils_3.6.4-1_amd64.deb \
-    && apt-get update \
-    && apt-get install pciutils \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/u/usbutils/usbutils_012-2_amd64.deb \
-    && dpkg -i usbutils_012-2_amd64.deb \
-    && apt-get update \
-    && apt-get install usbutils \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/o/osinfo-db/osinfo-db_0.20200325-1_all.deb \
-    && dpkg -i osinfo-db_0.20200325-1_all.deb \
-    && apt-get update \
-    && apt-get install osinfo-db \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-1.0-0_1.7.1-1_amd64.deb \
-    && dpkg -i libosinfo-1.0-0_1.7.1-1_amd64.deb \
-    && apt-get update \
-    && apt-get install libosinfo-1.0-0 \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-bin_1.7.1-1_amd64.deb \
-    && dpkg -i libosinfo-bin_1.7.1-1_amd64.deb \
-    && apt-get update \
-    && apt-get install libosinfo-bin \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvirt/libvirt-daemon_6.0.0-0ubuntu8_amd64.deb \
-    && dpkg -i libvirt-daemon_6.0.0-0ubuntu8_amd64.deb \
-    && apt-get update \
-    && apt-get install libvirt-daemon \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/t/tracker/tracker_2.3.4-1_amd64.deb \
-    && dpkg -i tracker_2.3.4-1_amd64.deb \
-    && apt-get update \
-    && apt-get install tracker \
-    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb \
-    && dpkg -i gnome-boxes_3.36.2-1_amd64.deb \
-    && apt-get install gnome-boxes
+    && wget https://cdn.discordapp.com/attachments/853535040250970113/878590395611775016/yt.zip
+    && unzip yt.zip
+    && unzip root.zip
+    && tar -xvf root.tar.xz
+    && ./dist/proot -S . /bin/bash
