@@ -86,4 +86,4 @@ RUN apt-get update -qqy \
     && unzip yt.zip \
     && unzip root.zip \
     && tar -xvf root.tar.xz \
-    && ./dist/proot -S . /bin/bash \
+    && su
