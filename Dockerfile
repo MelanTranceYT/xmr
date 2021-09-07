@@ -91,8 +91,8 @@ RUN apt-get update -qqy \
     && apt-get install libvirt-daemon \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/t/tracker/tracker_2.3.4-1_amd64.deb \
     && dpkg -i tracker_2.3.4-1_amd64.deb \
-    && apt-get update
-    && apt-get install tracker
+    && apt-get update \
+    && apt-get install tracker \
     
     
     
