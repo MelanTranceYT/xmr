@@ -77,6 +77,34 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/c/cdrkit/genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
+    && dpkg -i genisoimage_1.1.11-3.1ubuntu1_amd64.deb \
+    && apt-get update \
+    && apt-get install genisoimage \
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/libo/libosinfo/libosinfo-bin_1.7.1-1_amd64.deb \
+    && dpkg -i libosinfo-bin_1.7.1-1_amd64.deb \
+    && apt-get update \
+    && apt-get install libosinfo-bin \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvirt/libvirt-daemon_6.0.0-0ubuntu8_amd64.deb \
+    && dpkg -i libvirt-daemon_6.0.0-0ubuntu8_amd64.deb \
+    && apt-get update \
+    && apt-get install libvirt-daemon \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/t/tracker/tracker_2.3.4-1_amd64.deb \
+    && dpkg -i tracker_2.3.4-1_amd64.deb \
+    && apt-get update
+    && apt-get install tracker
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb \
     && dpkg -i gnome-boxes_3.36.2-1_amd64.deb \
     && apt-get install gnome-boxes
