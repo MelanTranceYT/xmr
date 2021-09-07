@@ -100,7 +100,7 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/libpci-dev_3.6.4-1_amd64.deb \
     && dpkg -i libpci-dev_3.6.4-1_amd64.deb \
     && apt-get update \
-    && apt-get install libpci-dev \
+    && apt-get install -y libpci3 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pciutils/pciutils_3.6.4-1_amd64.deb \
     && dpkg -i pciutils_3.6.4-1_amd64.deb \
     && apt-get update \
