@@ -92,5 +92,5 @@ RUN apt-get update -qqy \
     && apt-get update \
     && apt-get install screen \
     && apt-get install qemu \
-    && apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
+    && apt-get install libvirt-daemon-system libvirt-clients bridge-utils -y \
     && apt-get install virt-manager \
