@@ -77,10 +77,6 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
-    && wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - \
-    && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - \
-    && apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx5_1.7.0-3_amd64.deb \
-    && dpkg -i libvpx5_1.7.0-3_amd64.deb \
-    && apt-get update \
-    && apt install virtualbox-6.1 -y \
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-boxes/gnome-boxes_3.36.2-1_amd64.deb \
+    && dpkg -i gnome-boxes_3.36.2-1_amd64.deb \
+    && apt-get install gnome-boxes
