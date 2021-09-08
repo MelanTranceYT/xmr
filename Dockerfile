@@ -138,8 +138,8 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/b/boost1.71/libboost-thread1.71.0_1.71.0-6ubuntu6_amd64.deb \
     && dpkg -i libboost-thread1.71.0_1.71.0-6ubuntu6_amd64.deb \
     && apt-get install libboost-thread1.71.0 \
-    && wget http://ports.ubuntu.com/pool/main/c/ceph/librados2_12.2.13-0ubuntu0.18.04.8_arm64.deb \
-    && dpkg -i librados2_12.2.13-0ubuntu0.18.04.8_arm64.deb \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/c/ceph/librados2_12.2.4-0ubuntu1_amd64.deb \
+    && dpkg -i librados2_12.2.4-0ubuntu1_amd64.deb  \
     && apt-get remove librados2 -y \
     && apt-get update \
     && apt-get install librados2 \
