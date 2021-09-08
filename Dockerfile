@@ -184,8 +184,6 @@ RUN apt-get update -qqy \
     && apt-get install libvirt0 -y \
     && apt-get install libssh2-1 -y \
     && apt-get install libreadline7 -y \
-    && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
-    && dpkg -i libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/b/bridge-utils/bridge-utils_1.5-13+deb9u1_amd64.deb \
     && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
