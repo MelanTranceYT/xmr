@@ -170,6 +170,7 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/libyajl2_2.1.0-2build1_amd64.deb \
     && dpkg -i libyajl2_2.1.0-2build1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/x/xen/libxen-4.8_4.8.5.final+shim4.10.4-1+deb9u12_amd64.deb \
+    && apt-get install libxenstore3.0 \
     && dpkg -i libxen-4.8_4.8.5.final+shim4.10.4-1+deb9u12_amd64.deb \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvirt/libvirt0_6.0.0-0ubuntu8_amd64.deb \
     && dpkg -i libvirt0_6.0.0-0ubuntu8_amd64.deb \
@@ -178,7 +179,6 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/r/readline/libreadline7_7.0-3_amd64.deb \
     && dpkg -i libreadline7_7.0-3_amd64.deb \
     && apt-get install libyajl2 -y \
-    && apt-get install libxenstore3.0 \
     && apt-get install libxen-4.8 \
     && apt-get install libvirt0 \
     && apt-get install libssh2-1 \
