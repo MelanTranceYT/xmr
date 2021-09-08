@@ -141,15 +141,11 @@ RUN apt-get update -qqy \
     && apt-get install librados2 -y \
 # super small packages 1 end
     && apt-get install librbd1 \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-block-extra_4.2-3ubuntu6_amd64.deb \
-    && dpkg -i qemu-block-extra_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-block-extra \
 # tiny packages 1 end
     && wget http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6_amd64.deb \
     && dpkg -i acl_2.2.53-6_amd64.deb \
     && apt-get install acl \
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-common_4.2-3ubuntu6_amd64.deb \
-    && dpkg -i qemu-system-common_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-common \
 # small packages 3 end
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-data_4.2-3ubuntu6_all.deb \
