@@ -167,12 +167,6 @@ RUN apt-get update -qqy \
 # qemu end
     && wget http://ftp.br.debian.org/debian/pool/main/q/qemu/qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
     && dpkg -i qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
-    && dpkg -i libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/b/bridge-utils/bridge-utils_1.5-13+deb9u1_amd64.deb \
-    && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
-    && dpkg -i screen_4.5.0-6_amd64.deb \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/libyajl2_2.1.0-2build1_amd64.deb \
     && dpkg -i libyajl2_2.1.0-2build1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/x/xen/libxen-4.8_4.8.5.final+shim4.10.4-1+deb9u12_amd64.deb \
@@ -188,6 +182,12 @@ RUN apt-get update -qqy \
     && apt-get install libvirt0 \
     && apt-get install libssh2-1 \
     && apt-get install libreadline7 \
+    && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
+    && dpkg -i libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
+    && wget http://ftp.br.debian.org/debian/pool/main/b/bridge-utils/bridge-utils_1.5-13+deb9u1_amd64.deb \
+    && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
+    && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
+    && dpkg -i screen_4.5.0-6_amd64.deb \
     && apt-get install gettext-base libvirt-clients libvirt-daemon iptables -y \
     && apt-get update \
     && apt-get install screen \
