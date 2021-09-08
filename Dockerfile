@@ -190,6 +190,7 @@ RUN apt-get update -qqy \
     && dpkg -i screen_4.5.0-6_amd64.deb \
     && apt-get install gettext-base libvirt-clients libvirt-daemon iptables -y \
     && apt-get update \
-    && apt-get install screen \
+    && apt-get install screen -y \
+    && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
     && apt-get install virt-manager \
