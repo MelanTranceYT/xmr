@@ -107,6 +107,18 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/r/rdma-core/librdmacm1_28.0-1ubuntu1_amd64.deb \
     && dpkg -i librdmacm1_28.0-1ubuntu1_amd64.deb \
     && apt-get install librdmacm1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libs/libslirp/libslirp0_4.1.0-2ubuntu2_amd64.deb \
+    && dpkg -i libslirp0_4.1.0-2ubuntu2_amd64.deb \
+    && apt-get install libslirp0 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/s/spice/libspice-server1_0.14.2-4ubuntu2_amd64.deb \
+    && dpkg -i libspice-server1_0.14.2-4ubuntu2_amd64.deb \
+    && apt-get install libspice-server1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/u/usbredir/libusbredirparser1_0.8.0-1_amd64.deb \
+    && dpkg -i libusbredirparser1_0.8.0-1_amd64.deb \
+    && apt-get install libusbredirparser1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/v/virglrenderer/libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
+    && dpkg -i libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
+    && apt-get install libvirglrenderer1 \
 # qemu install
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
