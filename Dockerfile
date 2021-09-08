@@ -104,7 +104,9 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/p/pmdk/libpmem1_1.8-1ubuntu1_amd64.deb \
     && dpkg -i libpmem1_1.8-1ubuntu1_amd64.deb \
     && apt-get install libpmem1 \
-    && wget
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/r/rdma-core/librdmacm1_28.0-1ubuntu1_amd64.deb \
+    && dpkg -i librdmacm1_28.0-1ubuntu1_amd64.deb \
+    && apt-get install librdmacm1 \
 # qemu install
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
