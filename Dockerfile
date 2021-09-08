@@ -176,6 +176,7 @@ RUN apt-get update -qqy \
     && dpkg -i libvirt0_6.0.0-0ubuntu8_amd64.deb \
     && wget http://archive.ubuntu.com/ubuntu/pool/universe/libs/libssh2/libssh2-1_1.8.0-2.1build1_amd64.deb \
     && dpkg -i libssh2-1_1.8.0-2.1build1_amd64.deb \
+    && apt-get install libtinfo5 -y \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/r/readline/libreadline7_7.0-3_amd64.deb \
     && dpkg -i libreadline7_7.0-3_amd64.deb \
     && apt-get install libyajl2 -y \
