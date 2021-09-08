@@ -173,6 +173,16 @@ RUN apt-get update -qqy \
     && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
     && dpkg -i screen_4.5.0-6_amd64.deb \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/libyajl2_2.1.0-2build1_amd64.deb \
+    && dpkg -i libyajl2_2.1.0-2build1_amd64.deb \
+    && wget http://ftp.br.debian.org/debian/pool/main/x/xen/libxen-4.8_4.8.5.final+shim4.10.4-1+deb9u12_amd64.deb \
+    && dpkg -i libxen-4.8_4.8.5.final+shim4.10.4-1+deb9u12_amd64.deb \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libv/libvirt/libvirt0_6.0.0-0ubuntu8_amd64.deb \
+    && dpkg -i libvirt0_6.0.0-0ubuntu8_amd64.deb \
+    && wget http://archive.ubuntu.com/ubuntu/pool/universe/libs/libssh2/libssh2-1_1.8.0-2.1build1_amd64.deb \
+    && dpkg -i libssh2-1_1.8.0-2.1build1_amd64.deb \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/r/readline/libreadline7_7.0-3_amd64.deb \
+    && dpkg -i libreadline7_7.0-3_amd64.deb \
     && apt-get install libyajl2 libxen-4.8 libvirt0 libssh2-1 libreadline7 -y \
     && apt-get install gettext-base libvirt-clients libvirt-daemon iptables -y \
     && apt-get update \
