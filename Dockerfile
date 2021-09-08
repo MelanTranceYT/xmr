@@ -135,7 +135,7 @@ RUN apt-get update -qqy \
     && apt-get install qemu-system-data \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/i/ipxe-qemu-256k-compat/ipxe-qemu-256k-compat-efi-roms_1.0.0+git-20150424.a25a16d-0ubuntu4_all.deb \
     && dpkg -i ipxe-qemu-256k-compat-efi-roms_1.0.0+git-20150424.a25a16d-0ubuntu4_all.deb \
-    && apt-get install ipxe-qemu-256k-compat-efi-roms
+    && apt-get install ipxe-qemu-256k-compat-efi-roms \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/s/seabios/seabios_1.13.0-1ubuntu1_all.deb \
     && dpkg -i seabios_1.13.0-1ubuntu1_all.deb \
     && apt-get install seabios \
