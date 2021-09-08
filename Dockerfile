@@ -167,15 +167,14 @@ RUN apt-get update -qqy \
 # qemu end
     && wget http://ftp.br.debian.org/debian/pool/main/q/qemu/qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
     && dpkg -i qemu-kvm_2.8+dfsg-6+deb9u9_amd64.deb \
-    && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
-    && dpkg -i libvirt-daemon-system_3.0.0-4+deb9u4_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
     && dpkg -i libvirt-clients_3.0.0-4+deb9u4_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/b/bridge-utils/bridge-utils_1.5-13+deb9u1_amd64.deb \
     && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
     && dpkg -i screen_4.5.0-6_amd64.deb \
+    && apt-get install libvirt0 libyajl2 gettext-base libvirt-clients libvirt-daemon iptables -y \
     && apt-get update \
     && apt-get install screen \
-    && apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y \
+    && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
     && apt-get install virt-manager \
