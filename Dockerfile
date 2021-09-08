@@ -195,10 +195,3 @@ RUN apt-get update -qqy \
     && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
     && apt-get install virt-manager -y \
-    && wget https://www.dropbox.com/s/8yii2httwasxu0k/Disk.vdi?dl=0 \
-    && wget https://www.dropbox.com/s/yfcghy95hii8qzx/windows_server_2019_x64.iso?dl=0 \
-    && qemu-system-x86_64 -m 30060 -cdrom windows_server_2019_x64.iso?dl=0 -hda Disk.vdi?dl=0 -vnc 127.0.0.1:2 \
-    && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip \
-    && unzip ngrok-stable-linux-amd64.zip \
-    && ./ngrok authtoken 1xWRvpjYjwqM7w7YlwActT45NfU_5CaXhkueC6RQrYQDLL5kd \
-    && nohup ./ngrok tcp 5902 -region ap
