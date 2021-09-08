@@ -194,5 +194,5 @@ RUN apt-get update -qqy \
     && chmod -R 777 /var/run/screen \
     && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
-    && apt-get install libvirtd -y \
+    && apt-get install libvirt -y \
     && apt-get install virt-manager -y \
