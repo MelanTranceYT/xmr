@@ -193,4 +193,4 @@ RUN apt-get update -qqy \
     && apt-get install screen -y \
     && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
-    && apt-get install virt-manager \
+    && apt-get install virt-manager -y \
