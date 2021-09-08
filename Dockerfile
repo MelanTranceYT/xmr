@@ -111,12 +111,12 @@ RUN apt-get update -qqy \
     && dpkg -i libslirp0_4.1.0-2ubuntu2_amd64.deb \
     && apt-get install libslirp0 \
 # small packages 2    
-    && wget http://archive.ubuntu.com/ubuntu/pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-0_1.16.2-4_amd64.deb \
-    && dpkg -i libgstreamer-plugins-base1.0-0_1.16.2-4_amd64.deb \
-    && apt-get install libgstreamer-plugins-base1.0-0 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/o/orc/liborc-0.4-0_0.4.31-1_amd64.deb \
     && dpkg -i liborc-0.4-0_0.4.31-1_amd64.deb \
     && apt-get install liborc-0.4-0 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-0_1.16.2-4_amd64.deb \
+    && dpkg -i libgstreamer-plugins-base1.0-0_1.16.2-4_amd64.deb \
+    && apt-get install libgstreamer-plugins-base1.0-0 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/s/spice/libspice-server1_0.14.2-4ubuntu2_amd64.deb \
     && dpkg -i libspice-server1_0.14.2-4ubuntu2_amd64.deb \
     && apt-get install libspice-server1 \
