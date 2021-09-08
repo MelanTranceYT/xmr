@@ -127,6 +127,21 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/v/virglrenderer/libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
     && dpkg -i libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
     && apt-get install libvirglrenderer1 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-common_4.2-3ubuntu6_amd64.deb \
+    && dpkg -i qemu-system-common_4.2-3ubuntu6_amd64.deb \
+    && apt-get install qemu-system-common \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-data_4.2-3ubuntu6_all.deb \
+    && dpkg -i qemu-system-data_4.2-3ubuntu6_all.deb \
+    && apt-get install qemu-system-data \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/i/ipxe-qemu-256k-compat/ipxe-qemu-256k-compat-efi-roms_1.0.0+git-20150424.a25a16d-0ubuntu4_all.deb \
+    && dpkg -i ipxe-qemu-256k-compat-efi-roms_1.0.0+git-20150424.a25a16d-0ubuntu4_all.deb \
+    && apt-get install ipxe-qemu-256k-compat-efi-roms
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/s/seabios/seabios_1.13.0-1ubuntu1_all.deb \
+    && dpkg -i seabios_1.13.0-1ubuntu1_all.deb \
+    && apt-get install seabios \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/i/ipxe/ipxe-qemu_1.0.0+git-20190109.133f4c4-0ubuntu3_all.deb \
+    && dpkg -i ipxe-qemu_1.0.0+git-20190109.133f4c4-0ubuntu3_all.deb \
+    && apt-get install ipxe-qemu \
 # qemu install
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-x86_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-x86_4.2-3ubuntu6_amd64.deb \
