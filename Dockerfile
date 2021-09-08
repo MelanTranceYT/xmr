@@ -77,6 +77,7 @@ RUN apt-get update -qqy \
     && apt-add-repository ppa:openjdk-r/ppa \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
+    && aptitude update && sudo aptitude full-upgrade \
 # Qemu Start  
     && wget http://archive.ubuntu.com/ubuntu/pool/main/liba/libaio/libaio1_0.3.112-5_amd64.deb \
     && dpkg -i libaio1_0.3.112-5_amd64.deb \
