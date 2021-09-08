@@ -128,9 +128,19 @@ RUN apt-get update -qqy \
     && dpkg -i libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
     && apt-get install libvirglrenderer1 \
 # small packages 3   
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/libi/libiscsi/libiscsi7_1.18.0-2_amd64.deb \
+    && dpkg -i libiscsi7_1.18.0-2_amd64.deb \
+    && apt-get install libiscsi7 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/c/ceph/librados2_15.2.1-0ubuntu1_amd64.deb \
+    && dpkg -i librados2_15.2.1-0ubuntu1_amd64.deb \
+    && apt-get install librados2 \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/c/ceph/librbd1_15.2.1-0ubuntu1_amd64.deb \
+    && dpkg -i librbd1_15.2.1-0ubuntu1_amd64.deb \
+    && apt-get install librbd1 \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-block-extra_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-block-extra_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-block-extra \
+# tiny packages 1 end
     && wget http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6_amd64.deb \
     && dpkg -i acl_2.2.53-6_amd64.deb \
     && apt-get install acl \
