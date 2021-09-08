@@ -127,9 +127,17 @@ RUN apt-get update -qqy \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/v/virglrenderer/libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
     && dpkg -i libvirglrenderer1_0.8.2-1ubuntu1_amd64.deb \
     && apt-get install libvirglrenderer1 \
+# small packages 3   
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-block-extra_4.2-3ubuntu6_amd64.deb \
+    && dpkg -i qemu-block-extra_4.2-3ubuntu6_amd64.deb \
+    && apt-get install qemu-block-extra \
+    && wget http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6_amd64.deb \
+    && dpkg -i acl_2.2.53-6_amd64.deb \
+    && apt-get install acl \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-common_4.2-3ubuntu6_amd64.deb \
     && dpkg -i qemu-system-common_4.2-3ubuntu6_amd64.deb \
     && apt-get install qemu-system-common \
+# small packages 3 end
     && wget http://archive.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system-data_4.2-3ubuntu6_all.deb \
     && dpkg -i qemu-system-data_4.2-3ubuntu6_all.deb \
     && apt-get install qemu-system-data \
