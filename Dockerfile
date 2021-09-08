@@ -183,7 +183,11 @@ RUN apt-get update -qqy \
     && dpkg -i libssh2-1_1.8.0-2.1build1_amd64.deb \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/r/readline/libreadline7_7.0-3_amd64.deb \
     && dpkg -i libreadline7_7.0-3_amd64.deb \
-    && apt-get install libyajl2 libxen-4.8 libvirt0 libssh2-1 libreadline7 -y \
+    && apt-get install libyajl2 -y \
+    && apt-get install libxen-4.8 \
+    && apt-get install libvirt0 \
+    && apt-get install libssh2-1 \
+    && apt-get install libreadline7 \
     && apt-get install gettext-base libvirt-clients libvirt-daemon iptables -y \
     && apt-get update \
     && apt-get install screen \
