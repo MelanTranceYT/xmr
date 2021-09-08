@@ -140,6 +140,7 @@ RUN apt-get update -qqy \
     && apt-get install libboost-thread1.71.0 \
     && wget http://launchpadlibrarian.net/361357356/librados2_12.2.4-0ubuntu1_amd64.deb \
     && dpkg -i librados2_12.2.4-0ubuntu1_amd64.deb \
+    && apt-get remove librados2 \
     && apt-get install librados2 \
 # super small packages 1 end
     && wget http://archive.ubuntu.com/ubuntu/pool/main/c/ceph/librbd1_15.2.1-0ubuntu1_amd64.deb \
