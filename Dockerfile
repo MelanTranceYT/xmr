@@ -195,9 +195,3 @@ RUN apt-get update -qqy \
     && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
     && apt-get install virt-manager -y \
-    && apt-get install libc6 -y \
-    && apt-get install libgcc1 -y \
-    && apt-get install libx11-6 -y \
-    && apt-get install libxext6 -y \
-    && wget https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.21.406-Linux-x86.deb \
-    && apt install ./VNC-Viewer-6.21.406-Linux-x86.deb \
