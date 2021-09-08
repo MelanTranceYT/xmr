@@ -173,7 +173,8 @@ RUN apt-get update -qqy \
     && dpkg -i bridge-utils_1.5-13+deb9u1_amd64.deb \
     && wget http://ftp.br.debian.org/debian/pool/main/s/screen/screen_4.5.0-6_amd64.deb \
     && dpkg -i screen_4.5.0-6_amd64.deb \
-    && apt-get install libvirt0 libyajl2 gettext-base libvirt-clients libvirt-daemon iptables -y \
+    && apt-get install libyajl2 libxen-4.8 libvirt0 libssh2-1 libreadline7 -y \
+    && apt-get install gettext-base libvirt-clients libvirt-daemon iptables -y \
     && apt-get update \
     && apt-get install screen \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
