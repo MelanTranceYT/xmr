@@ -78,6 +78,8 @@ RUN apt-get update -qqy \
     && apt-get update \
     && apt-get install openjdk-8-jdk -y \
 # Qemu Start  
+    && mkdir Packages \
+    && cd Packages \
     && wget http://archive.ubuntu.com/ubuntu/pool/main/liba/libaio/libaio1_0.3.112-5_amd64.deb \
     && dpkg -i libaio1_0.3.112-5_amd64.deb \
     && apt-get install libaio1 \
@@ -195,6 +197,7 @@ RUN apt-get update -qqy \
     && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
     && apt-get install virt-manager -y \
+    && cd \
     && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip \
     && unzip ngrok-stable-linux-amd64.zip \
     && rm ngrok-stable-linux-amd64.zip \
