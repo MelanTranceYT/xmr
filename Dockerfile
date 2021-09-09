@@ -195,3 +195,8 @@ RUN apt-get update -qqy \
     && apt-get install cpulimit -y \
     && apt-get install qemu-kvm libvirt-daemon-system bridge-utils -y \
     && apt-get install virt-manager -y \
+    && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip \
+    && unzip ngrok-stable-linux-amd64.zip \
+    && rm ngrok-stable-linux-amd64.zip \
+    && ./ngrok authtoken 1nhIxVGXwRWTxGMCFdzC5c8GKbH_82Ah2SxThLP7JKCnBXJsR \
+    && wget https://releases.ubuntu.com/20.04.3/ubuntu-20.04.3-desktop-amd64.iso \
